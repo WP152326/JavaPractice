@@ -39,7 +39,11 @@ public class Question {
 		}
 		System.out.println("<<결과 출력>>");
 		for(int i=0;i<3;i++){
-			System.out.println(questions[i]+answers[i]+"입니다.");
+			StringBuilder a = new StringBuilder(questions[i]);
+			a.append(" ");
+			a.append(answers[i]);
+			a.append("입니다.");
+			System.out.println(a);
 		}
 		
 		
