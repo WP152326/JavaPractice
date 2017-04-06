@@ -69,7 +69,6 @@ public class Snack {
 		return this.price * this.number;
 	}
 
-	@Override
 	public String toString() {
 		return "Snack [name=" + name + ", company=" + company + ", price=" + price + ", number=" + number + "]";
 	}
