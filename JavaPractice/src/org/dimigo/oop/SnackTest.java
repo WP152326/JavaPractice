@@ -18,9 +18,25 @@ package org.dimigo.oop;
 public class SnackTest {
 
 	public static void main(String[] args) {
-		Snack[] snackArr = new Snack[3];
-		snackArr[0]=new Snack("새우깡", "농심", 1100, 2);
-		snackArr[1]=new Snack("콘칲", "크라운", 1200, 1);
+		int sum = 0;
+		
+		SnackTest st = new SnackTest();
+			
+		Snack[] snacks = {new Snack("새우깡", "농심", 1100, 2), new Snack("콘칲", "크라운", 1200, 1), new Snack("허니버터칩", "해태", 1500, 4)};
+		for(Snack snack : snacks) {
+			st.printProduct(snack);
+			sum+=snack.calcPrice();
+		}
+		
+		System.out.printf("총 구매 금액 : %,d원\n", sum);
+	}
+	
+	public void printProduct(Snack snack) {
+		System.out.println("이름 : " + snack.getName());
+		System.out.println("제조사 : " + snack.getCompany());
+		System.out.println("가격 : " + snack.getPrice() + "원");
+		System.out.println("개수 : " + snack.getNumber() + "개");
+		System.out.println();
 	}
 
 }
