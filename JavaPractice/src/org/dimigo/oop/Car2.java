@@ -23,7 +23,7 @@ public class Car2 {
 	private int price;
 	
 	public Car2(String newCompany, String newModel, String newColor, int newMaxSpeed, int newPrice){
-		company=newCompany;
+		this.company=newCompany;
 		model=newModel;
 		color=newColor;
 		maxSpeed=newMaxSpeed;
